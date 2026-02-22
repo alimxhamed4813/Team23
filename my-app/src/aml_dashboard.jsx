@@ -97,7 +97,6 @@ const SOURCES = {
     year: 2020,
     authors: "Jullum et al.",
     journal: "Journal of Money Laundering Control, 23(1)",
-    file: "Detecting_money_laundering_transactions_with_machine_learning.pdf",
   },
   "TFFEAT2023": {
     id: "TFFEAT2023",
@@ -108,7 +107,7 @@ const SOURCES = {
     country: "—",
     year: 2023,
     authors: "et al.",
-    file: "A_TimeFrequency_Based_Suspicious_Activity_Detection_for_AntiMoney_Laundering.pdf",
+    file: "A_Time-Frequency_Based_Suspicious_Activity_Detection_for_Anti-Money_Laundering.pdf",
   },
   "UNSUP2022": {
     id: "UNSUP2022",
@@ -119,7 +118,7 @@ const SOURCES = {
     country: "—",
     year: 2022,
     authors: "et al.",
-    file: "Anomaly_detection_using_unsupervised_machine_learning_algorithms.pdf",
+    file: "Anomaly detection using unsupervised machine learning algorithms.pdf",
   },
   "FEENG2023": {
     id: "FEENG2023",
@@ -141,7 +140,7 @@ const SOURCES = {
     country: "—",
     year: 2021,
     authors: "et al.",
-    file: "developing_a_scoring_model_for_managing_money_laundering_transactions_using_machine_learning.pdf",
+    file: "developing a scoring model for managing money laundering transactions using machine learning.pdf",
   },
   "PCMLTFA": {
     id: "PCMLTFA",
@@ -1144,14 +1143,14 @@ npm start
 //  ROOT
 // ═══════════════════════════════════════════════════════════════
 export default function AMLLibrary() {
-  const [tab, setTab] = useState("typologies");
+  const [tab, setTab] = useState("readme");
 
   const tabs = [
+    { id: "readme", label: "README" },
     { id: "typologies", label: "Typologies", count: TYPOLOGIES.length },
     { id: "indicators", label: "Indicators", count: INDICATORS.length },
     { id: "featuremap", label: "Feature Map", count: FEATURE_MAP.length },
     { id: "sources", label: "Sources", count: Object.keys(SOURCES).length },
-    { id: "readme", label: "README" },
   ];
 
   return (
