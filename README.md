@@ -1,2 +1,2 @@
 # Team23
-ScotiaBank Antin Money Laundering Machine Learning Competition
+ScotiaBank Anti Money Laundering Machine Learning Competition
