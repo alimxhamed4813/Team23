@@ -166,7 +166,7 @@ const TYPOLOGIES = [
     indicators: ["IND-01", "IND-02", "IND-03", "IND-10"],
     features: ["channel_concentration", "churn_ratio", "churn_symmetry_count", "wire_preference", "wu_preference"],
     sources: ["FINTRAC-OCG", "FATF-OCG", "FINCEN-SAR"],
-    severity: "Critical",
+    severity: "Extremely High",
   },
   {
     id: "TYP-02",
@@ -520,10 +520,10 @@ const C = {
 };
 
 const SEVERITY_STYLE = {
-  Critical: { bg: "#fef2f2", border: "#fca5a5", text: "#dc2626" },
-  High:     { bg: "#fff7ed", border: "#fdba74", text: "#c2410c" },
-  Medium:   { bg: "#fefce8", border: "#fde047", text: "#a16207" },
-  Low:      { bg: "#f0fdf4", border: "#86efac", text: "#15803d" },
+  "Extremely High": { bg: "#fef2f2", border: "#fca5a5", text: "#dc2626" },
+  High:             { bg: "#fff7ed", border: "#fdba74", text: "#c2410c" },
+  Medium:           { bg: "#fefce8", border: "#fde047", text: "#a16207" },
+  Low:              { bg: "#f0fdf4", border: "#86efac", text: "#15803d" },
 };
 
 const STAGE_STYLE = {
@@ -718,7 +718,7 @@ function TypologyView() {
       </div>
 
       {detail && (
-        <div style={{ background: C.bgCard, border: `1px solid ${C.border}`, borderRadius: 8, padding: 20, height: "fit-content", position: "sticky", top: 80 }}>
+        <div style={{ background: C.bgCard, border: `1px solid ${C.border}`, borderRadius: 8, padding: 20, position: "sticky", top: 80, maxHeight: "calc(100vh - 120px)", overflowY: "auto" }}>
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 14 }}>
             <span style={{ fontFamily: C.mono, fontSize: 11, color: C.muted }}>{detail.id}</span>
             <button onClick={() => setSelected(null)} style={{ background: "none", border: "none", cursor: "pointer", fontSize: 16, color: C.muted }}>✕</button>
@@ -841,7 +841,7 @@ function IndicatorView() {
       </div>
 
       {detail && (
-        <div style={{ background: C.bgCard, border: `1px solid ${C.border}`, borderRadius: 8, padding: 20, height: "fit-content", position: "sticky", top: 80 }}>
+        <div style={{ background: C.bgCard, border: `1px solid ${C.border}`, borderRadius: 8, padding: 20, position: "sticky", top: 80, maxHeight: "calc(100vh - 120px)", overflowY: "auto" }}>
           <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 14 }}>
             <span style={{ fontFamily: C.mono, fontSize: 11, color: CAT_COLORS[detail.category] || C.muted, fontWeight: 700 }}>{detail.id}</span>
             <button onClick={() => setSelected(null)} style={{ background: "none", border: "none", cursor: "pointer", fontSize: 16, color: C.muted }}>✕</button>
